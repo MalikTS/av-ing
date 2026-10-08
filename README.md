@@ -1,6 +1,7 @@
 # av-ing
 
-REST API сервиса объявлений на Go, Chi и PostgreSQL.
+Доска объявлений для Республики Ингушетия. Проект состоит из REST API на Go
+и адаптивного frontend-прототипа на Nuxt, Vue и TypeScript.
 
 ## Возможности
 
@@ -25,6 +26,28 @@ go run ./cmd/server
 ```
 
 По умолчанию сервер доступен на `http://localhost:8080`.
+
+## Frontend-прототип
+
+Требуется Node.js 24.11 или новее.
+
+```powershell
+cd frontend
+npm install
+npm run dev
+```
+
+Интерфейс откроется на `http://localhost:3000`. Сейчас главная страница работает
+на демонстрационных данных: поиск, фильтры, сортировка и избранное интерактивны,
+но запросы к REST API будут подключены на следующем этапе.
+
+Проверка frontend:
+
+```powershell
+cd frontend
+npm run typecheck
+npm run build
+```
 
 ## Основные маршруты
 
